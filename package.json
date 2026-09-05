@@ -1,0 +1,91 @@
+{
+  "name": "sslcommerz-nestjs",
+  "version": "0.1.0",
+  "description": "SSLCommerz payment gateway for NestJS — validated DTOs, callback controller, IPN signature and order verification, events, guard, exception filter and health indicator",
+  "keywords": [
+    "nestjs",
+    "sslcommerz",
+    "payment",
+    "gateway",
+    "bangladesh",
+    "ipn",
+    "webhook",
+    "emi",
+    "bkash",
+    "nagad",
+    "refund"
+  ],
+  "license": "MIT",
+  "type": "commonjs",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "check": "npm run lint:check && npm run format:check && npm run typecheck && npm test",
+    "clean": "rm -rf dist coverage .turbo",
+    "dev": "tsc -p tsconfig.build.json --watch",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint \"{src,test}/**/*.ts\" eslint.config.mjs --fix",
+    "lint:check": "eslint \"{src,test}/**/*.ts\" eslint.config.mjs",
+    "prepublishOnly": "npm run build",
+    "test": "vitest run",
+    "test:ci": "vitest run --coverage",
+    "test:cov": "vitest run --coverage",
+    "test:watch": "vitest",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "@nestjs/common": "^10.0.0 || ^11.0.0",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.0",
+    "reflect-metadata": "^0.2.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@nestjs/common": "^11.1.29",
+    "@nestjs/core": "^11.1.29",
+    "@nestjs/testing": "^11.1.29",
+    "@types/node": "^26.2.0",
+    "@vitest/coverage-v8": "^4.1.10",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.0",
+    "eslint": "^10.8.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-jsdoc": "^64.2.0",
+    "prettier": "^3.4.2",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.67.0",
+    "vitest": "^4.1.10"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "author": "byshahriar",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/byshahriar/sslcommerz-nestjs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/byshahriar/sslcommerz-nestjs/issues"
+  },
+  "homepage": "https://github.com/byshahriar/sslcommerz-nestjs#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": false
+}
