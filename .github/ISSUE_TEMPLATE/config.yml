@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/byshahriar/sslcommerz-nestjs/security/advisories/new
+    about: Report privately, never as a public issue.
+  - name: SSLCommerz gateway support
+    url: https://developer.sslcommerz.com/
+    about: Questions about store accounts, credentials or gateway behaviour itself.

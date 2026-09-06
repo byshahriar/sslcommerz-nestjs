@@ -1,0 +1,43 @@
+name: Bug report
+description: Something behaves differently from what the docs describe.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please do not include store credentials, `verify_sign` values or raw callback payloads —
+        they identify customers and can be replayed. Redact before pasting.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you expected, and what you got instead.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: How to reproduce
+      description: The smallest module registration and call that shows it.
+      render: ts
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Package version
+      placeholder: 0.1.0
+    validations:
+      required: true
+  - type: input
+    id: nest-version
+    attributes:
+      label: NestJS version
+      placeholder: 11.x
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Gateway environment
+      options: [sandbox, live]
+    validations:
+      required: true
